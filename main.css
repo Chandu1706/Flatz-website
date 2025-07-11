@@ -255,10 +255,25 @@ nav {
   }
 }
 .store-buttons {
-  margin-top: 20px;
+  position: sticky;
+  top: 100px; /* adjust based on nav height */
+  z-index: 10;
   display: flex;
+  gap: 1rem;
   align-items: center;
+  padding: 1rem 0;
+  margin-top: 1rem;
 }
+
+.store-buttons img {
+  height: 50px;
+  transition: transform 0.3s ease;
+}
+
+.store-buttons img:hover {
+  transform: scale(1.05);
+}
+
 .carousel-wrapper:hover .carousel-track {
   animation-play-state: paused;
 }
