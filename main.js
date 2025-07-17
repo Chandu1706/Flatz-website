@@ -73,7 +73,7 @@ window.addEventListener('scroll', function() {
 function playVideo() {
     const videoContainer = document.querySelector('.video-container');
     const videoEmbed = `
-        <iframe width="100%" height="500" src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" frameborder="0" allowfullscreen></iframe>
+        <iframe width="100%" height="500" src="demo.mp4" frameborder="0" allowfullscreen></iframe>
     `;
     videoContainer.innerHTML = videoEmbed;
 }
