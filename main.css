@@ -1212,74 +1212,7 @@ footer {
         }
         
 
-  .hero-content h1 {
-    font-size: 2.2rem;
-    line-height: 1.3;
-  }
-
-  .hero-content p {
-    font-size: 1.1rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .hero-cta {
-    font-size: 1rem;
-    padding: 0.7rem 1.8rem;
-  }
-
-  .store-buttons {
-    justify-content: center;
-    margin-top: 1rem;
-  }
-
-  
-
-
-
-  
-
-  
-
-
-  .hero-content h1 {
-    font-size: 2.2rem;
-    line-height: 1.3;
-  }
-
-  .hero-content p {
-    font-size: 1.1rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .hero-cta {
-    font-size: 1rem;
-    padding: 0.7rem 1.8rem;
-  }
-
-  .store-buttons {
-    justify-content: center;
-    margin-top: 1rem;
-    position: relative; /* prevent stickiness on scroll */
-  }
-
-  /* Robot video on the left */
-  
-
-
-  
-
-  
-
-  /* Move iPhone animation block to the left */
-  .iphone-container {
-    margin-left: 0 !important;
-    margin-right: auto;
-  }
-
-
-/* === Cleaned Hero Section Injected === */
-
-.hero {
+  .hero {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -1325,6 +1258,12 @@ footer {
 
 .hero-cta:hover {
   background-color: #0056b3;
+}
+
+.store-buttons {
+  justify-content: center;
+  margin-top: 1rem;
+  position: relative; /* prevent stickiness on scroll */
 }
 
 .hero-canvas-wrapper {
@@ -1380,11 +1319,12 @@ footer {
   100% { transform: translateX(-50%); }
 }
 
+/* === Mobile Styles === */
 @media (max-width: 768px) {
   .hero {
-    flex-direction: row-reverse;
+    flex-direction: column;
     flex-wrap: wrap;
-    align-items: flex-start;
+    align-items: center;
     padding: 5rem 1.5rem 2rem;
     min-height: auto;
   }
@@ -1392,7 +1332,7 @@ footer {
   .hero-content {
     width: 100%;
     text-align: center;
-    order: 2;
+    order: 1;
     margin-top: 1rem;
     padding: 0 1rem;
   }
@@ -1414,40 +1354,18 @@ footer {
 
   .store-buttons {
     justify-content: center;
-    margin-top: 1rem;
-    position: relative;
+    margin-top: 0.1rem !important;
+    padding: 0 !important;
+    margin-bottom: 1.2rem;
+    position: relative !important;
   }
 
-  .hero-canvas-wrapper {
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    order: 1;
-  }
-
-  #hero-canvas-container {
-    width: 100%;
-    max-width: 320px;
-    padding-top: 0;
-    text-align: center;
-  }
-
-  #robotVideo {
-    width: 100%;
-    max-width: 320px;
-    margin: 0 auto;
-    margin-left: 0 !important;
-  }
-
+  /* Hide robot animation and label on mobile */
+  .hero-canvas-wrapper,
+  #hero-canvas-container,
+  #robotVideo,
   #robot-label {
-    position: static;
-    transform: none;
-    width: auto;
-    white-space: normal;
-    animation: none;
-    margin-top: 0.5rem;
-    font-size: 16px;
-    text-align: center;
+    display: none !important;
   }
 
   .iphone-container {
