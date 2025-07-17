@@ -182,27 +182,6 @@ nav {
 .hero-cta:hover {
   background-color: #0056b3;
 }
-@media (max-width: 768px) {
-  .hero {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 2rem 1.5rem;
-  }
-
-  .hero-content {
-    text-align: center;
-    width: 100%;
-  }
-
-  .hero-content h1 {
-    font-size: 2.2rem;
-  }
-
-  .hero-content p {
-    font-size: 1.1rem;
-  }
-}
-
 
 #robotVideo {
   margin-left: 200px;
