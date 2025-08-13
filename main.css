@@ -1373,3 +1373,159 @@ footer {
     margin-right: auto;
   }
 }
+/* === Careers page fixes === */
+
+/* Make job cards visible by default in the openings list */
+#rolesList .feature-card,
+#rolesList .job-card {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* Ensure the openings section isn't hidden behind the hero */
+.hero-canvas-wrapper {
+  position: static !important;
+  inset: auto !important;
+  height: auto !important;
+  z-index: auto !important;
+}
+
+#openings {
+  position: relative;
+  z-index: 1;
+}
+
+/* Nice-to-have: pointer cursor on collapsible summaries */
+#rolesList details > summary {
+  cursor: pointer;
+}
+/* Outline variant to match your “Hiring process” button */
+.cta-button.outline {
+  background: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+}
+
+/* Modal */
+.modal.hidden { display: none; }
+.modal { position: fixed; inset: 0; z-index: 2000; }
+.modal-backdrop {
+  position: absolute; inset: 0;
+  background: rgba(0,0,0,0.45);
+  backdrop-filter: blur(2px);
+}
+.modal-content {
+  position: relative;
+  max-width: 640px;
+  margin: 6vh auto;
+  background: #fff;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 25px 60px rgba(0,0,0,.25);
+  animation: modalIn .18s ease-out;
+}
+@keyframes modalIn { from { transform: translateY(12px); opacity: 0; } to { transform: none; opacity: 1; } }
+.modal-title { font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; }
+.modal-close {
+  position: absolute; top: 10px; right: 12px;
+  background: transparent; border: none; font-size: 1.75rem; line-height: 1;
+  color: #333; cursor: pointer;
+}
+
+.form-row { display: flex; flex-direction: column; gap: .5rem; margin-bottom: 1rem; }
+.form-row.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.form-row label { font-weight: 600; font-size: .95rem; color: var(--text-primary); }
+.form-row input, .form-row textarea {
+  width: 100%; border: 1px solid #e5e7eb; border-radius: 10px; padding: .8rem 1rem;
+  font: inherit; outline: none;
+}
+.form-row input:focus, .form-row textarea:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(0,123,255,.12); }
+.modal-actions { display: flex; justify-content: flex-end; gap: .75rem; margin-top: .5rem; }
+
+@media (max-width: 640px) {
+  .modal-content { margin: 3vh 1rem; padding: 1rem; }
+  .form-row.two-col { grid-template-columns: 1fr; }
+}
+/* Modal scrolling + layout */
+.modal { 
+  position: fixed; inset: 0; z-index: 2000;
+  /* allow the dialog itself to scroll if content exceeds viewport */
+  overflow: auto;
+}
+
+.modal-backdrop { position: absolute; inset: 0; background: rgba(0,0,0,.45); backdrop-filter: blur(2px); }
+
+.modal-content {
+  position: relative;
+  max-width: 640px;
+  margin: 6vh auto;
+  background: #fff;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 25px 60px rgba(0,0,0,.25);
+  animation: modalIn .18s ease-out;
+
+  /* key: cap height & enable internal scrolling */
+  max-height: 88vh;
+  overflow: auto;
+  overscroll-behavior: contain; /* prevent scroll chaining to page */
+  -webkit-overflow-scrolling: touch;
+}
+
+@media (max-width: 640px) {
+  .modal-content {
+    margin: 3vh 1rem;
+    padding: 1rem;
+    max-height: 90dvh; /* better on mobile with virtual keyboard */
+  }
+}
+
+/* Optional: make the form rows compact on small screens */
+.form-row { gap: .5rem; margin-bottom: .85rem; }
+.process-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.process-card {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: relative;
+  transform: translateY(-100px);
+  opacity: 0;
+  animation: dropDown 0.8s ease forwards;
+}
+
+.process-card:nth-child(1) { animation-delay: 0.1s; }
+.process-card:nth-child(2) { animation-delay: 0.3s; }
+.process-card:nth-child(3) { animation-delay: 0.5s; }
+.process-card:nth-child(4) { animation-delay: 0.7s; }
+
+.step-number {
+  display: inline-block;
+  background: var(--primary);
+  color: white;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+@keyframes dropDown {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

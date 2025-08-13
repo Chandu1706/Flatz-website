@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Careers — FlatZ</title>
+  <link rel="stylesheet" href="main.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <!-- Nav -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <img src="logo.jpeg" alt="FlatZ Logo" class="logo-icon" />
+        FlatZ
+      </a>
+      <ul class="nav-links">
+         <li><a href="about.html">About Us</a></li>
+        <li><a href="index.html#features">Features</a></li>
+        <li><a href="index.html#video">Demo</a></li>
+       
+        <li><a href="#openings" class="active">Careers</a></li>
+        
+      </ul>
+      <a href="#openings" class="nav-cta">View Roles</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Join us to build the future of <span class="highlight-flatz">Community Living</span></h1>
+      <p>We’re a small, fast team shipping ambitious, AI‑powered experiences for residents, builders, and community managers.</p>
+      <div class="store-buttons" style="gap: 12px;">
+        <a href="#openings" class="hero-cta">See Openings <span></span></a>
+        <a href="mailto:career@flat-z.com?subject=General%20Application%20-%20FlatZ&body=Hi%20FlatZ%20Team,%0D%0A%0D%0AI'm%20interested%20in%20joining%20FlatZ.%20Please%20find%20my%20resume%20attached.%0D%0A%0D%0AThanks!" 
+   class="hero-cta" 
+   style="background:transparent;border:2px solid var(--primary);color:var(--primary);">
+   Email Us
+</a>
+
+      </div>
+    </div>
+
+    <!-- RIGHT SIDE: moved Openings search/filter panel into hero -->
+    <div class="hero-canvas-wrapper" style="display:flex;align-items:center;justify-content:center">
+      <div class="feature-checklist" style="max-width:520px;width:100%;background:rgba(255,255,255,0.7);backdrop-filter:saturate(140%) blur(6px);border-radius:20px;padding:18px;border:1px solid #e5e7eb;">
+        <h3 class="checklist-title" style="margin-bottom:8px">Search <span class="highlight-flatz">Open Roles</span></h3>
+        <div class="animated-checklist" style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+          <input id="searchRoles" type="text" placeholder="Search roles, stack, keywords…" style="grid-column:1/-1;padding:12px;border-radius:12px;border:1px solid #e5e7eb;">
+          <select id="filterTeam" style="padding:12px;border-radius:12px;border:1px solid #e5e7eb;">
+            <option value="">All teams</option>
+            <option>Engineering</option>
+            <option>Data/AI</option>
+            <option>Product</option>
+            <option>Design</option>
+            <option>Operations</option>
+            <option>Sales</option>
+          </select>
+          <select id="filterLocation" style="padding:12px;border-radius:12px;border:1px solid #e5e7eb;">
+            <option value="">All locations</option>
+            <option>Remote</option>
+            
+            <option>Visakhapatnam, IN</option>
+            <option>Hyderabad, IN</option>
+            
+          </select>
+          <select id="filterType" style="padding:12px;border-radius:12px;border:1px solid #e5e7eb;">
+            <option value="">All types</option>
+            <option>Full‑time</option>
+            <option>Internship</option>
+            <option>Contract</option>
+          </select>
+          <button id="clearFilters" 
+        class="hero-cta" 
+        style="background:transparent;border:2px solid var(--primary);color:var(--primary);">
+  Clear
+</button>
+
+          <a href="#openings" class="hero-cta" style="justify-self:end;">Browse roles</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Openings (list only, search panel moved up) -->
+  <section class="features" id="openings">
+    <div class="container">
+      <h2 class="section-title">Open <span class="highlight-flatz">Roles</span></h2>
+      <p class="section-subtitle">Remote‑friendly. We hire all over in India remotely  — and great people anywhere.</p>
+
+      <div class="iphone-container" style="flex:1;max-width:1100px;margin:0 auto;">
+        <div id="rolesList" class="features-grid">
+          <!-- Job Card: Software Engineer -->
+          <article class="feature-card job-card" 
+            data-team="Engineering" data-location="Remote" data-type="Full‑time" data-keywords="react native fastapi supabase typescript aws gcp azure mobile">
+            <div class="feature-icon">💻</div>
+            <h3>Software Engineer — Full‑Stack (React Native + FastAPI)</h3>
+            <p class="muted">Team: Engineering • Location: Remote • Type: Full‑time • Job ID: FLZ‑ENG‑001</p>
+            <details>
+              <summary>About the role</summary>
+              <ul>
+                <li>Own features end‑to‑end across mobile (React Native) and backend (Python/FastAPI).</li>
+                <li>Work with Supabase/AWS and ship high‑quality, accessible UX.</li>
+                <li>Set up CI/CD, testing, and observability for reliability.</li>
+              </ul>
+              <p><strong>Nice to have:</strong> Tailwind, TypeScript, cloud (AWS/GCP/Azure).</p>
+            </details>
+            <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px;">
+  <button type="button"
+        class="cta-button outline apply-btn"
+        data-job-id="FLZ-ENG-001"
+        data-job-title="Software Engineer — Full‑Stack (React Native + FastAPI)">
+  Apply
+</button>
+
+<a class="cta-button outline" href="#process">Hiring process</a>
+
+            </div>
+          </article>
+
+         
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="features" id="process">
+  <div class="container">
+    <h2 class="section-title">
+      Our Hiring <span class="highlight-flatz">Process</span>
+    </h2>
+    <h2>
+      We value skills over experience, as we are a young team that believes anyone can achieve great things!!!
+    </h2>
+
+    <div class="process-cards">
+      <div class="process-card">
+        <span class="step-number">1</span>
+        <p>Take an assessment aligned to the role</p>
+      </div>
+      <div class="process-card">
+        <span class="step-number">2</span>
+        <p>Role deep-dive with hiring manager</p>
+      </div>
+      <div class="process-card">
+        <span class="step-number">3</span>
+        <p>Interview with our technical recruiter</p>
+      </div>
+      <div class="process-card">
+        <span class="step-number">4</span>
+        <p>Receive offer and Rock on!!</p>
+      </div>
+    </div>
+
+    <p class="section-subtitle" style="margin-top:12px;">
+      We move fast and give clear, actionable feedback.
+    </p>
+  </div>
+</section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Think you'd be a great fit?</h2>
+      <p>We’d love to meet you. If none of the roles fit, send a general application.</p>
+      <a href="mailto:info@flat-z.com?subject=General%20Application%20-%20FlatZ" class="cta-button">Apply via Email <span>→</span></a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>FlatZ</h3>
+        <p>Simplifying community living through innovative technology.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Product</h3>
+        <a href="index.html#features">Features</a>
+        <a href="#">Pricing</a>
+        <a href="index.html#video">Demo</a>
+        <a href="#">Support</a>
+      </div>
+      <div class="footer-section">
+        <h3>Company</h3>
+        <a href="index.html#">About</a>
+        <a href="careers.html">Careers</a>
+        <a href="#">Press</a>
+        <a href="get-started.html">Contact</a>
+        <a href="privacy_policy.html">Privacy policy</a>
+      </div>
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <a href="mailto:info@flat-z.com">Email: info@flat-z.com</a>
+        <a href="mailto:careers@flat-z.com">Careers: careers@flat-z.com</a>
+        <a href="mailto:careers@flat-z.com">Careers: careers@flat-z.com</a>
+        <a href="tel:+917569696014">Tel(IN): +91 7569696014</a>
+        <a href="tel:+1234567890">Tel(US): +1 (234) 567-890</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 FlatZ. All rights reserved.</p>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/company/107777942" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="mailto:careers@flat-z.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        <a href="https://www.instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Simple filter script -->
+  <script>
+    (function(){
+      const qs = s => document.querySelector(s);
+      const qsa = s => Array.from(document.querySelectorAll(s));
+      const search = qs('#searchRoles');
+      const team = qs('#filterTeam');
+      const loc = qs('#filterLocation');
+      const type = qs('#filterType');
+      const clear = qs('#clearFilters');
+      const cards = qsa('.job-card');
+
+      function matches(card, input, teamV, locV, typeV){
+        const text = (card.textContent || '').toLowerCase();
+        const kw = (card.dataset.keywords || '').toLowerCase();
+        const okText = !input || text.includes(input) || kw.includes(input);
+        const okTeam = !teamV || (card.dataset.team === teamV);
+        const okLoc = !locV || (card.dataset.location === locV);
+        const okType = !typeV || (card.dataset.type === typeV);
+        return okText && okTeam && okLoc && okType;
+      }
+
+      function filter(){
+        const input = (search?.value || '').trim().toLowerCase();
+        const teamV = team?.value;
+        const locV = loc?.value;
+        const typeV = type?.value;
+        let visible = 0;
+        cards.forEach(card => {
+          const show = matches(card, input, teamV, locV, typeV);
+          card.style.display = show ? '' : 'none';
+          if (show) visible++;
+        });
+        // If none, show a friendly empty state
+        let empty = qs('#emptyState');
+        if (!empty) {
+          empty = document.createElement('div');
+          empty.id = 'emptyState';
+          empty.className = 'feature-card';
+          empty.style.textAlign = 'center';
+          empty.style.display = 'none';
+          empty.innerHTML = '<h3>No matching roles</h3><p>Try clearing filters or searching different keywords.</p>';
+          qs('#rolesList').appendChild(empty);
+        }
+        empty.style.display = visible ? 'none' : '';
+      }
+
+      [search, team, loc, type].forEach(el => el && el.addEventListener('input', filter));
+      [team, loc, type].forEach(el => el && el.addEventListener('change', filter));
+      clear && clear.addEventListener('click', () => {
+        if (search) search.value = '';
+        if (team) team.value = '';
+        if (loc) loc.value = '';
+        if (type) type.value = '';
+        filter();
+      });
+      filter();
+    })();
+  </script>
+  <div id="applyModal" class="modal hidden" aria-hidden="true" role="dialog" aria-modal="true">
+  <div class="modal-backdrop" data-close-modal></div>
+  <div class="modal-content" role="document">
+    <button class="modal-close" aria-label="Close" data-close-modal>&times;</button>
+    <h3 class="modal-title">Apply for <span id="jobTitleLabel">Role</span></h3>
+
+    <form id="applyForm">
+      <input type="hidden" name="jobId" id="jobIdField">
+      <input type="hidden" name="jobTitle" id="jobTitleField">
+
+      <div class="form-row">
+        <label>Full name</label>
+        <input type="text" name="name" required>
+      </div>
+
+      <div class="form-row">
+        <label>Email address</label>
+        <input type="email" name="email" required>
+      </div>
+
+      <div class="form-row">
+        <label>Location</label>
+        <input type="text" name="location" placeholder="City, Country">
+      </div>
+
+      <div class="form-row two-col">
+        <div>
+          <label>LinkedIn</label>
+          <input type="url" name="linkedin" placeholder="https://linkedin.com/in/…">
+        </div>
+        <div>
+          <label>GitHub/Portfolio</label>
+          <input type="url" name="portfolio" placeholder="https://…">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <label>Resume (URL)</label>
+        <input type="url" name="resume" placeholder="Link to your resume (PDF, Drive, etc.)">
+      </div>
+
+      <div class="form-row">
+        <label>Short note</label>
+        <textarea name="note" rows="4" placeholder="Why FlatZ? Anything we should know."></textarea>
+      </div>
+
+      <div class="modal-actions">
+        <button type="button" class="cta-button outline" data-close-modal>Cancel</button>
+        <button type="submit" class="cta-button">Apply now</button>
+      </div>
+    </form>
+  </div>
+</div>
+<script>
+(function() {
+  const modal = document.getElementById('applyModal');
+  const titleLabel = document.getElementById('jobTitleLabel');
+  const jobIdField = document.getElementById('jobIdField');
+  const jobTitleField = document.getElementById('jobTitleField');
+  const form = document.getElementById('applyForm');
+
+  function openModal(jobId, jobTitle) {
+    titleLabel.textContent = jobTitle + ' (' + jobId + ')';
+    jobIdField.value = jobId;
+    jobTitleField.value = jobTitle;
+    modal.classList.remove('hidden');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    modal.classList.add('hidden');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  // Open handlers
+  document.addEventListener('click', function(e) {
+    const btn = e.target.closest('.apply-btn');
+    if (!btn) return;
+    const id = btn.getAttribute('data-job-id') || 'GENERAL';
+    const title = btn.getAttribute('data-job-title') || 'General Application';
+    openModal(id, title);
+  });
+
+  // Close handlers
+  modal.addEventListener('click', function(e) {
+    if (e.target.hasAttribute('data-close-modal') || e.target.closest('[data-close-modal]')) {
+      closeModal();
+    }
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && !modal.classList.contains('hidden')) closeModal();
+  });
+
+  // Submit -> compose email
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const data = Object.fromEntries(new FormData(form).entries());
+    const subject = encodeURIComponent(`Application - ${data.jobId} ${data.jobTitle}`);
+    const lines = [
+      `Role: ${data.jobId} - ${data.jobTitle}`,
+      `Name: ${data.name || ''}`,
+      `Email: ${data.email || ''}`,
+      `Location: ${data.location || ''}`,
+      `LinkedIn: ${data.linkedin || ''}`,
+      `GitHub/Portfolio: ${data.portfolio || ''}`,
+      `Resume URL: ${data.resume || ''}`,
+      '',
+      (data.note ? 'Note:\n' + data.note : '')
+    ];
+    const body = encodeURIComponent(lines.join('\n'));
+    // Change address if needed:
+    const mailto = `mailto:careers@flat-z.com?subject=${subject}&body=${body}`;
+    window.location.href = mailto;
+    closeModal();
+  });
+})();
+</script>
+
+</body>
+</html>
